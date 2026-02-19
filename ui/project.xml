@@ -1,0 +1,9 @@
+<project>
+    <targets>
+        <target name="esp32p4_720">
+            <display width="720" height="720" color_format="RGB565"/>
+            <memory name="psram" size="32M"/>
+            <memory name="flash" size="32M"/>
+        </target>
+    </targets>
+</project>

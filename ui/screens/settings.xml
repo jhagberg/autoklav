@@ -1,0 +1,147 @@
+<screen>
+    <view style_bg_color="0x121212"
+          width="720" height="720"
+          style_pad_all="0">
+
+        <!-- ══ HEADER ══════════════════════════════════════ -->
+        <header_bar title="Inställningar"
+                    status_text="● Standby"
+                    status_color="0x66BB6A"
+                    align="top_mid"
+                    x="0" y="0"/>
+
+        <!-- ══ PID SECTION ══════════════════════════════════ -->
+        <lv_obj width="688" height="220"
+                align="top_mid"
+                x="0" y="68"
+                styles="card">
+
+            <!-- Section title -->
+            <lv_label text="PID Reglering"
+                      align="top_left"
+                      x="0" y="0"
+                      style_text_color="0x00BCD4"
+                      style_text_font="lv_font_montserrat_16"/>
+
+            <lv_obj width="656" height="164"
+                    align="bottom_mid"
+                    style_bg_opa="0"
+                    style_border_width="0"
+                    style_pad_all="0"
+                    flex_flow="column"
+                    flex_align_main="space_evenly">
+
+                <pid_row param_name="Kp"  param_value="2.50"  slider_val="25"/>
+                <pid_row param_name="Ki"  param_value="0.80"  slider_val="8"/>
+                <pid_row param_name="Kd"  param_value="0.10"  slider_val="1"/>
+
+            </lv_obj>
+        </lv_obj>
+
+        <!-- ══ NETWORK SECTION ══════════════════════════════ -->
+        <lv_obj width="688" height="148"
+                align="top_mid"
+                x="0" y="300"
+                styles="card">
+
+            <lv_label text="Nätverk (Ethernet)"
+                      align="top_left"
+                      x="0" y="0"
+                      style_text_color="0x00BCD4"
+                      style_text_font="lv_font_montserrat_16"/>
+
+            <lv_obj width="656" height="100"
+                    align="bottom_mid"
+                    style_bg_opa="0"
+                    style_border_width="0"
+                    style_pad_all="0"
+                    flex_flow="row"
+                    flex_wrap="1"
+                    flex_align_main="space_between"
+                    flex_align_cross="start">
+
+                <!-- IP Address -->
+                <lv_obj width="200" height="48"
+                        style_bg_opa="0"
+                        style_border_width="0">
+                    <lv_label text="IP-adress"
+                              style_text_color="0x546E7A"
+                              style_text_font="lv_font_montserrat_11"/>
+                    <lv_label text="192.168.1.42"
+                              align="bottom_left"
+                              style_text_color="0xFFFFFF"
+                              style_text_font="lv_font_montserrat_14"/>
+                </lv_obj>
+
+                <!-- Subnet -->
+                <lv_obj width="200" height="48"
+                        style_bg_opa="0"
+                        style_border_width="0">
+                    <lv_label text="Nätmask"
+                              style_text_color="0x546E7A"
+                              style_text_font="lv_font_montserrat_11"/>
+                    <lv_label text="255.255.255.0"
+                              align="bottom_left"
+                              style_text_color="0xFFFFFF"
+                              style_text_font="lv_font_montserrat_14"/>
+                </lv_obj>
+
+                <!-- Status -->
+                <lv_obj width="200" height="48"
+                        style_bg_opa="0"
+                        style_border_width="0">
+                    <lv_label text="Status"
+                              style_text_color="0x546E7A"
+                              style_text_font="lv_font_montserrat_11"/>
+                    <lv_label text="● Ansluten"
+                              align="bottom_left"
+                              style_text_color="0x66BB6A"
+                              style_text_font="lv_font_montserrat_14"/>
+                </lv_obj>
+
+            </lv_obj>
+        </lv_obj>
+
+        <!-- ══ SYSTEM SECTION ═══════════════════════════════ -->
+        <lv_obj width="688" height="116"
+                align="top_mid"
+                x="0" y="460"
+                styles="card">
+
+            <lv_label text="System"
+                      align="top_left"
+                      x="0" y="0"
+                      style_text_color="0x00BCD4"
+                      style_text_font="lv_font_montserrat_16"/>
+
+            <lv_obj width="656" height="64"
+                    align="bottom_mid"
+                    style_bg_opa="0"
+                    style_border_width="0"
+                    style_pad_all="0"
+                    flex_flow="row"
+                    flex_align_main="space_between"
+                    flex_align_cross="center">
+
+                <lv_label text="Firmware: v1.0.0   |   Drifttid: 02:14:33   |   Temp.sensor: DS18B20"
+                          style_text_color="0xB0BEC5"
+                          style_text_font="lv_font_montserrat_12"/>
+
+                <lv_button width="120" height="44"
+                           styles="btn_ghost">
+                    <lv_label text="Spara"
+                              align="center"
+                              style_text_color="0xFFFFFF"
+                              style_text_font="lv_font_montserrat_14"/>
+                </lv_button>
+
+            </lv_obj>
+        </lv_obj>
+
+        <!-- ══ NAVBAR ════════════════════════════════════════ -->
+        <nav_bar active_tab="3"
+                 align="bottom_mid"
+                 x="0" y="0"/>
+
+    </view>
+</screen>

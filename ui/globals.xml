@@ -1,25 +1,102 @@
 <globals>
-    <api>
-        <!-- Add <enumdefs> here -->
-    </api>
 
+    <!-- ═══════════════════════════════════════════════
+         Global colour constants — Material Dark Theme
+    ═══════════════════════════════════════════════ -->
     <consts>
-        <!-- Add <px>, <int>, <color> etc here -->
+        <!-- Backgrounds -->
+        <color name="bg_base"      value="0x121212"/>
+        <color name="bg_surface"   value="0x1E1E1E"/>
+        <color name="bg_elevated"  value="0x2C2C2C"/>
+        <color name="bg_navbar"    value="0x0D1117"/>
+
+        <!-- Accents -->
+        <color name="primary"      value="0x00BCD4"/>
+        <color name="warm"         value="0xFF7043"/>
+        <color name="green"        value="0x66BB6A"/>
+        <color name="red"          value="0xEF5350"/>
+        <color name="yellow"       value="0xFFA726"/>
+
+        <!-- Text -->
+        <color name="text_hi"      value="0xFFFFFF"/>
+        <color name="text_med"     value="0xB0BEC5"/>
+        <color name="text_lo"      value="0x546E7A"/>
+        <color name="divider"      value="0x263238"/>
+
+        <!-- Sizing -->
+        <px name="radius_card"     value="16"/>
+        <px name="radius_btn"      value="12"/>
+        <px name="pad_sm"          value="8"/>
+        <px name="pad_md"          value="16"/>
+        <px name="pad_lg"          value="24"/>
+        <px name="navbar_h"        value="72"/>
+        <px name="header_h"        value="56"/>
     </consts>
 
+    <!-- ═══════════════════════════════════════════════
+         Shared styles
+    ═══════════════════════════════════════════════ -->
     <styles>
-        <!-- Add <style> tags here -->
+        <style name="screen_bg"
+               style_bg_color="#bg_base"
+               style_bg_opa="255"/>
+
+        <style name="card"
+               style_bg_color="#bg_surface"
+               style_bg_opa="255"
+               style_radius="#radius_card"
+               style_border_width="1"
+               style_border_color="#divider"
+               style_pad_all="#pad_md"/>
+
+        <style name="card_elevated"
+               style_bg_color="#bg_elevated"
+               style_bg_opa="255"
+               style_radius="#radius_card"
+               style_border_width="0"
+               style_pad_all="#pad_md"/>
+
+        <style name="btn_primary"
+               style_bg_color="#primary"
+               style_radius="#radius_btn"
+               style_border_width="0"
+               style_pad_ver="12"
+               style_pad_hor="20"/>
+
+        <style name="btn_warm"
+               style_bg_color="#warm"
+               style_radius="#radius_btn"
+               style_border_width="0"
+               style_pad_ver="12"
+               style_pad_hor="20"/>
+
+        <style name="btn_ghost"
+               style_bg_color="#bg_elevated"
+               style_radius="#radius_btn"
+               style_border_width="1"
+               style_border_color="#divider"
+               style_pad_ver="12"
+               style_pad_hor="20"/>
+
+        <style name="label_title"
+               style_text_color="#text_hi"
+               style_text_font="lv_font_montserrat_20"/>
+
+        <style name="label_body"
+               style_text_color="#text_med"
+               style_text_font="lv_font_montserrat_14"/>
+
+        <style name="label_small"
+               style_text_color="#text_lo"
+               style_text_font="lv_font_montserrat_12"/>
+
+        <style name="label_value_big"
+               style_text_color="#text_hi"
+               style_text_font="lv_font_montserrat_48"/>
+
+        <style name="label_accent"
+               style_text_color="#primary"
+               style_text_font="lv_font_montserrat_32"/>
     </styles>
 
-    <subjects>
-        <!-- Add <int>, <string>, or <float> subjects here -->
-    </subjects>
-
-    <images>
-        <!-- Add <file> or <data> tags here -->
-    </images>
-
-    <fonts>
-        <!-- Add <bin> , <tiny_ttf>, <freetype> tags here -->
-    </fonts>
 </globals>

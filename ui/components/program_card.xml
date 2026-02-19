@@ -1,0 +1,66 @@
+<component>
+
+    <api>
+        <prop name="prog_name"    type="string" default="Steril 134°C"/>
+        <prop name="prog_temp"    type="string" default="134°C"/>
+        <prop name="prog_time"    type="string" default="18 min"/>
+        <prop name="prog_pressure" type="string" default="2.1 bar"/>
+        <prop name="prog_desc"    type="string" default="Standard sterilisering"/>
+        <prop name="accent_color" type="color"  default="0xFF7043"/>
+    </api>
+
+    <previews>
+        <preview name="default" width="720" height="130" style_bg_color="0x121212" style_pad_all="8"/>
+    </previews>
+
+    <view extends="lv_obj"
+          width="688" height="120"
+          style_bg_color="0x1E1E1E"
+          style_radius="16"
+          style_border_width="1"
+          style_border_color="0x263238"
+          style_pad_all="16">
+
+        <!-- Left accent bar -->
+        <lv_obj width="4" height="120"
+                style_bg_color="$accent_color"
+                style_radius="0"
+                style_border_width="0"
+                align="left_mid"
+                x="-16"/>
+
+        <!-- Program name -->
+        <lv_label text="$prog_name"
+                  align="top_left"
+                  x="12" y="0"
+                  style_text_color="0xFFFFFF"
+                  style_text_font="lv_font_montserrat_18"/>
+
+        <!-- Description -->
+        <lv_label text="$prog_desc"
+                  align="top_left"
+                  x="12" y="26"
+                  style_text_color="0xB0BEC5"
+                  style_text_font="lv_font_montserrat_12"/>
+
+        <!-- Specs: temp | time | pressure -->
+        <lv_label text="$prog_temp  |  $prog_time  |  $prog_pressure"
+                  align="bottom_left"
+                  x="12" y="0"
+                  style_text_color="$accent_color"
+                  style_text_font="lv_font_montserrat_12"/>
+
+        <!-- Start button -->
+        <lv_button width="140" height="44"
+                   align="right_mid"
+                   style_bg_color="$accent_color"
+                   style_radius="12"
+                   style_border_width="0">
+            <lv_label text="Starta"
+                      align="center"
+                      style_text_color="0xFFFFFF"
+                      style_text_font="lv_font_montserrat_14"/>
+        </lv_button>
+
+    </view>
+</component>

@@ -1,0 +1,44 @@
+<component>
+
+    <api>
+        <prop name="param_name"  type="string" default="Kp"/>
+        <prop name="param_value" type="string" default="2.5"/>
+        <prop name="slider_val"  type="int"    default="25"/>
+    </api>
+
+    <previews>
+        <preview name="default" width="680" height="60" style_bg_color="0x1E1E1E" style_pad_all="8"/>
+    </previews>
+
+    <view extends="lv_obj"
+          width="100%" height="52"
+          style_bg_opa="0"
+          style_border_width="0"
+          style_pad_all="0"
+          flex_flow="row"
+          flex_align_main="space_between"
+          flex_align_cross="center">
+
+        <!-- Parameter name -->
+        <lv_label text="$param_name"
+                  width="80"
+                  style_text_color="0xFFFFFF"
+                  style_text_font="lv_font_montserrat_16"/>
+
+        <!-- Slider -->
+        <lv_slider width="420" height="8"
+                   value="$slider_val"
+                   min="0" max="100"
+                   style_bg_color="0x2C2C2C"
+                   style_outline_width="0"
+                   style_pad_all="0"/>
+
+        <!-- Current value -->
+        <lv_label text="$param_value"
+                  width="60"
+                  align="right_mid"
+                  style_text_color="0x00BCD4"
+                  style_text_font="lv_font_montserrat_16"/>
+
+    </view>
+</component>

@@ -1,0 +1,125 @@
+<screen>
+    <view style_bg_color="0x121212"
+          width="720" height="720"
+          style_pad_all="0">
+
+        <!-- ══ HEADER ══════════════════════════════════════ -->
+        <header_bar title="Monitor"
+                    status_text="● Standby"
+                    status_color="0x66BB6A"
+                    align="top_mid"
+                    x="0" y="0"/>
+
+        <!-- ══ LIVE STATUS CARDS ════════════════════════════ -->
+        <lv_obj width="688" height="80"
+                align="top_mid"
+                x="0" y="64"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_all="0"
+                flex_flow="row"
+                flex_align_main="space_between">
+
+            <stat_card card_title="TEMPERATUR"
+                       card_value="134.2"
+                       card_unit="°C"
+                       value_color="0xFF7043"
+                       card_width="210"
+                       card_height="72"/>
+
+            <stat_card card_title="TRYCK"
+                       card_value="2.10"
+                       card_unit="bar"
+                       value_color="0x00BCD4"
+                       card_width="210"
+                       card_height="72"/>
+
+            <stat_card card_title="TID KVAR"
+                       card_value="12:34"
+                       card_unit="min:s"
+                       value_color="0x66BB6A"
+                       card_width="210"
+                       card_height="72"/>
+
+        </lv_obj>
+
+        <!-- ══ TEMPERATURE CHART ════════════════════════════ -->
+        <lv_obj width="688" height="260"
+                align="top_mid"
+                x="0" y="156"
+                styles="card"
+                style_pad_top="12"
+                style_pad_bottom="8">
+
+            <lv_label text="Temperaturkurva"
+                      align="top_left"
+                      x="0" y="0"
+                      style_text_color="0xB0BEC5"
+                      style_text_font="lv_font_montserrat_13"/>
+
+            <lv_chart width="656" height="210"
+                      align="bottom_mid"
+                      type="line"
+                      point_count="60"
+                      style_bg_color="0x1E1E1E"
+                      style_bg_opa="255"
+                      style_border_width="0"
+                      style_outline_width="0"
+                      style_line_color="0xFF7043"
+                      style_line_width="2"/>
+
+        </lv_obj>
+
+        <!-- ══ EVENT LOG ════════════════════════════════════ -->
+        <lv_obj width="688" height="184"
+                align="top_mid"
+                x="0" y="428"
+                styles="card"
+                style_pad_all="12">
+
+            <lv_label text="Händelselogg"
+                      align="top_left"
+                      x="0" y="0"
+                      style_text_color="0xB0BEC5"
+                      style_text_font="lv_font_montserrat_13"/>
+
+            <!-- Log entries -->
+            <lv_obj width="656" height="148"
+                    align="bottom_mid"
+                    style_bg_opa="0"
+                    style_border_width="0"
+                    style_pad_all="0"
+                    flex_flow="column"
+                    flex_align_main="start"
+                    flex_align_cross="start">
+
+                <lv_label text="14:32:01  Program startat: 134°C / 18min"
+                          style_text_color="0xB0BEC5"
+                          style_text_font="lv_font_montserrat_12"/>
+
+                <lv_label text="14:31:55  Uppvärmning påbörjad"
+                          style_text_color="0xB0BEC5"
+                          style_text_font="lv_font_montserrat_12"/>
+
+                <lv_label text="14:31:40  SSR aktiverat"
+                          style_text_color="0xFFA726"
+                          style_text_font="lv_font_montserrat_12"/>
+
+                <lv_label text="14:31:30  System initierat"
+                          style_text_color="0x546E7A"
+                          style_text_font="lv_font_montserrat_12"/>
+
+                <lv_label text="14:28:10  Ansluten: 192.168.1.42"
+                          style_text_color="0x66BB6A"
+                          style_text_font="lv_font_montserrat_12"/>
+
+            </lv_obj>
+        </lv_obj>
+
+        <!-- ══ NAVBAR ════════════════════════════════════════ -->
+        <nav_bar active_tab="1"
+                 align="bottom_mid"
+                 x="0" y="0"/>
+
+    </view>
+</screen>

@@ -1,0 +1,70 @@
+<screen>
+    <view style_bg_color="0x121212"
+          width="720" height="720"
+          style_pad_all="0">
+
+        <!-- ══ HEADER ══════════════════════════════════════ -->
+        <header_bar title="Program"
+                    status_text="● Standby"
+                    status_color="0x66BB6A"
+                    align="top_mid"
+                    x="0" y="0"/>
+
+        <!-- ══ SECTION HEADING ═══════════════════════════════ -->
+        <lv_label text="Välj steriliseringsprogram"
+                  align="top_left"
+                  x="16" y="72"
+                  style_text_color="0xB0BEC5"
+                  style_text_font="lv_font_montserrat_13"/>
+
+        <!-- ══ PROGRAM CARDS ════════════════════════════════ -->
+        <lv_obj width="720" height="540"
+                align="top_mid"
+                x="0" y="96"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_hor="16"
+                style_pad_ver="0"
+                flex_flow="column"
+                flex_align_main="start"
+                flex_align_cross="center"
+                flex_track_cross="0"
+                style_pad_row="10">
+
+            <program_card prog_name="Steril 134°C"
+                          prog_temp="134°C"
+                          prog_time="18 min"
+                          prog_pressure="2.1 bar"
+                          prog_desc="Standard sterilisering — kirurgiska instrument"
+                          accent_color="0xFF7043"/>
+
+            <program_card prog_name="Steril 121°C"
+                          prog_temp="121°C"
+                          prog_time="30 min"
+                          prog_pressure="1.1 bar"
+                          prog_desc="Skonsam sterilisering — plastmaterial"
+                          accent_color="0x00BCD4"/>
+
+            <program_card prog_name="Snabbsteril 134°C"
+                          prog_temp="134°C"
+                          prog_time="4 min"
+                          prog_pressure="2.1 bar"
+                          prog_desc="Snabbcykel för oinpackade instrument"
+                          accent_color="0xFFA726"/>
+
+            <program_card prog_name="Torkprogram"
+                          prog_temp="110°C"
+                          prog_time="15 min"
+                          prog_pressure="0.0 bar"
+                          prog_desc="Torkning av instrument efter sterilisering"
+                          accent_color="0x66BB6A"/>
+
+        </lv_obj>
+
+        <!-- ══ NAVBAR ════════════════════════════════════════ -->
+        <nav_bar active_tab="2"
+                 align="bottom_mid"
+                 x="0" y="0"/>
+
+    </view>
+</screen>

@@ -1,0 +1,103 @@
+<component>
+
+    <api>
+        <prop name="active_tab" type="int" default="0"/>
+    </api>
+
+    <previews>
+        <preview name="default" width="720" height="80" style_bg_color="0x121212"/>
+    </previews>
+
+    <view extends="lv_obj"
+          width="720" height="72"
+          style_bg_color="0x0D1117"
+          style_radius="0"
+          style_border_width="1"
+          style_border_side="3"
+          style_border_color="0x263238"
+          style_pad_all="0"
+          flex_flow="row"
+          flex_align_main="space_evenly"
+          flex_align_cross="center">
+
+        <!-- Tab 1: Hem -->
+        <lv_obj width="180" height="72"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_all="0"
+                flex_flow="column"
+                flex_align_main="center"
+                flex_align_cross="center">
+
+            <lv_obj width="60" height="3"
+                    style_bg_color="0x00BCD4"
+                    style_radius="2"
+                    style_border_width="0"
+                    align="top_mid"/>
+
+            <lv_label text="&#xF015;"
+                      style_text_color="0x00BCD4"
+                      style_text_font="lv_font_montserrat_20"
+                      align="center"/>
+
+            <lv_label text="Hem"
+                      style_text_color="0x00BCD4"
+                      style_text_font="lv_font_montserrat_10"/>
+        </lv_obj>
+
+        <!-- Tab 2: Monitor -->
+        <lv_obj width="180" height="72"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_all="0"
+                flex_flow="column"
+                flex_align_main="center"
+                flex_align_cross="center">
+
+            <lv_label text="&#xF080;"
+                      style_text_color="0x546E7A"
+                      style_text_font="lv_font_montserrat_20"/>
+
+            <lv_label text="Monitor"
+                      style_text_color="0x546E7A"
+                      style_text_font="lv_font_montserrat_10"/>
+        </lv_obj>
+
+        <!-- Tab 3: Program -->
+        <lv_obj width="180" height="72"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_all="0"
+                flex_flow="column"
+                flex_align_main="center"
+                flex_align_cross="center">
+
+            <lv_label text="&#xF03A;"
+                      style_text_color="0x546E7A"
+                      style_text_font="lv_font_montserrat_20"/>
+
+            <lv_label text="Program"
+                      style_text_color="0x546E7A"
+                      style_text_font="lv_font_montserrat_10"/>
+        </lv_obj>
+
+        <!-- Tab 4: Inställningar -->
+        <lv_obj width="180" height="72"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_all="0"
+                flex_flow="column"
+                flex_align_main="center"
+                flex_align_cross="center">
+
+            <lv_label text="&#xF013;"
+                      style_text_color="0x546E7A"
+                      style_text_font="lv_font_montserrat_20"/>
+
+            <lv_label text="Inställn."
+                      style_text_color="0x546E7A"
+                      style_text_font="lv_font_montserrat_10"/>
+        </lv_obj>
+
+    </view>
+</component>

@@ -1,0 +1,40 @@
+<component>
+
+    <api>
+        <prop name="card_title"  type="string"  default="VÄRDE"/>
+        <prop name="card_value"  type="string"  default="---"/>
+        <prop name="card_unit"   type="string"  default=""/>
+        <prop name="value_color" type="color"   default="0x00BCD4"/>
+        <prop name="card_width"  type="int"     default="210"/>
+        <prop name="card_height" type="int"     default="108"/>
+    </api>
+
+    <previews>
+        <preview name="default" width="220" height="120" style_bg_color="0x121212" style_pad_all="8"/>
+    </previews>
+
+    <view extends="lv_obj"
+          width="$card_width" height="$card_height"
+          styles="card">
+
+        <!-- Title row -->
+        <lv_label text="$card_title"
+                  align="top_left"
+                  x="0" y="0"
+                  styles="label_small"/>
+
+        <!-- Big value -->
+        <lv_label text="$card_value"
+                  align="left_mid"
+                  x="0" y="8"
+                  style_text_color="$value_color"
+                  style_text_font="lv_font_montserrat_32"/>
+
+        <!-- Unit label bottom-right -->
+        <lv_label text="$card_unit"
+                  align="bottom_right"
+                  x="0" y="0"
+                  styles="label_small"/>
+
+    </view>
+</component>
